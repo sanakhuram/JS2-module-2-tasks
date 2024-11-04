@@ -1,4 +1,9 @@
 /**
- * Returns true if the input contains at least one number, one uppercase letter, and one lowercase letter, as validated by a regular expression.
+ * Validates if the input string contains at least one lowercase letter, one uppercase letter, and one number.
+ * @param {string} input - The string to validate.
+ * @returns {boolean} True if the input meets the criteria; otherwise, false.
  */
-export function regexFunction(input) {}
+export function regexFunction(input) {
+  const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/;
+  return regex.test(input);
+}

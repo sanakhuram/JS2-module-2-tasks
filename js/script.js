@@ -1,12 +1,18 @@
 /**
- * Rename, move, rewrite and add JSDoc to this function
+ * Generates a greeting message using an object with first and last name.
+ * @param {Object} person - An object with `firstName` and `lastName` properties.
+ * @returns {string} A greeting message.
  */
-export function ipsum(o) {
-  return "Hello, " + o.firstName + " " + o.lastName;
+export function generateGreeting(person) {
+  return `Hello, ${person.firstName} ${person.lastName}`;
 }
 
 /**
- * This function should take in an array and return the largest number
- * Write function, rename, move and add JSDoc.
+ * Finds and returns the largest number in an array.
+ * @param {number[]} numbers - Array of numbers.
+ * @returns {number} The largest number in the array.
  */
-export function dolor() {}
+export function findLargestNumber(numbers) {
+  if (!Array.isArray(numbers) || numbers.length === 0) return null;
+  return Math.max(...numbers);
+}
